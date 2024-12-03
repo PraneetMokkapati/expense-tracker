@@ -1,1 +1,838 @@
 
+Command: shopt -s histappend
+Output:
+
+Exit Code: 0
+----
+Command: npm init -y
+Output:
+Wrote to /home/praneet/devdock/expense-tracker/package.json:
+
+{
+  "name": "expense-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
+Exit Code: 0
+----
+Command: npm install --save-dev hardhat @nomicfoundation/hardhat-toolbox typescript ts-node @types/node @types/mocha @types/chai ethers@^6.0.0
+Output:
+
+up to date, audited 578 packages in 3s
+
+96 packages are looking for funding
+  run `npm fund` for details
+
+29 vulnerabilities (25 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+Exit Code: 0
+----
+Command: npm audit fix
+Output:
+
+up to date, audited 578 packages in 20s
+
+96 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+No fix available
+node_modules/cookie
+  @sentry/node  4.0.0-beta.0 - 7.74.2-alpha.1
+  Depends on vulnerable versions of cookie
+  node_modules/@sentry/node
+    hardhat  >=0.1.0-rc.0
+    Depends on vulnerable versions of @ethersproject/abi
+    Depends on vulnerable versions of @sentry/node
+    node_modules/hardhat
+      @nomicfoundation/hardhat-chai-matchers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-chai-matchers
+      @nomicfoundation/hardhat-ethers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ethers
+        @nomicfoundation/hardhat-toolbox  *
+        Depends on vulnerable versions of @nomicfoundation/hardhat-chai-matchers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ignition-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-network-helpers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+        Depends on vulnerable versions of @typechain/hardhat
+        Depends on vulnerable versions of hardhat
+        Depends on vulnerable versions of hardhat-gas-reporter
+        Depends on vulnerable versions of solidity-coverage
+        node_modules/@nomicfoundation/hardhat-toolbox
+      @nomicfoundation/hardhat-ignition  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition
+      @nomicfoundation/hardhat-ignition-ethers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ignition
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition-ethers
+      @nomicfoundation/hardhat-network-helpers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-network-helpers
+      @nomicfoundation/hardhat-verify  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-verify
+      @typechain/hardhat  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@typechain/hardhat
+      hardhat-gas-reporter  *
+      Depends on vulnerable versions of hardhat
+      node_modules/hardhat-gas-reporter
+      solidity-coverage  >=0.8.0-beta.0
+      Depends on vulnerable versions of hardhat
+      node_modules/solidity-coverage
+
+elliptic  <=6.5.7
+Elliptic's EDDSA missing signature length check - https://github.com/advisories/GHSA-f7q4-pwc6-w24p
+Elliptic's ECDSA missing check for whether leading bit of r and s is zero - https://github.com/advisories/GHSA-977x-g7h5-7qgw
+Elliptic allows BER-encoded signatures - https://github.com/advisories/GHSA-49q7-c7j4-3p7m
+Elliptic's verify function omits uniqueness validation - https://github.com/advisories/GHSA-434g-2637-qmqr
+Valid ECDSA signatures erroneously rejected in Elliptic - https://github.com/advisories/GHSA-fc9h-whq2-v747
+No fix available
+node_modules/elliptic
+  @ethersproject/signing-key  <=5.7.0
+  Depends on vulnerable versions of elliptic
+  node_modules/@ethersproject/signing-key
+    @ethersproject/hdnode  *
+    Depends on vulnerable versions of @ethersproject/abstract-signer
+    Depends on vulnerable versions of @ethersproject/signing-key
+    Depends on vulnerable versions of @ethersproject/transactions
+    Depends on vulnerable versions of @ethersproject/wordlists
+    node_modules/@ethersproject/hdnode
+      @ethersproject/json-wallets  *
+      Depends on vulnerable versions of @ethersproject/abstract-signer
+      Depends on vulnerable versions of @ethersproject/hdnode
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/json-wallets
+    @ethersproject/transactions  <=5.7.0
+    Depends on vulnerable versions of @ethersproject/signing-key
+    node_modules/@ethersproject/transactions
+      @ethersproject/abstract-provider  *
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/abstract-provider
+        @ethersproject/abstract-signer  *
+        Depends on vulnerable versions of @ethersproject/abstract-provider
+        node_modules/@ethersproject/abstract-signer
+          @ethersproject/hash  5.0.6 - 5.7.0
+          Depends on vulnerable versions of @ethersproject/abstract-signer
+          node_modules/@ethersproject/hash
+            @ethersproject/abi  5.0.10 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/abi
+              @ethersproject/contracts  *
+              Depends on vulnerable versions of @ethersproject/abi
+              Depends on vulnerable versions of @ethersproject/abstract-provider
+              Depends on vulnerable versions of @ethersproject/abstract-signer
+              Depends on vulnerable versions of @ethersproject/transactions
+              node_modules/@ethersproject/contracts
+                ethers  5.0.0-beta.119 - 5.7.2
+                Depends on vulnerable versions of @ethersproject/abi
+                Depends on vulnerable versions of @ethersproject/abstract-provider
+                Depends on vulnerable versions of @ethersproject/abstract-signer
+                Depends on vulnerable versions of @ethersproject/contracts
+                Depends on vulnerable versions of @ethersproject/hash
+                Depends on vulnerable versions of @ethersproject/hdnode
+                Depends on vulnerable versions of @ethersproject/json-wallets
+                Depends on vulnerable versions of @ethersproject/providers
+                Depends on vulnerable versions of @ethersproject/signing-key
+                Depends on vulnerable versions of @ethersproject/transactions
+                Depends on vulnerable versions of @ethersproject/wallet
+                Depends on vulnerable versions of @ethersproject/wordlists
+                node_modules/eth-gas-reporter/node_modules/ethers
+                  eth-gas-reporter  >=0.2.26
+                  Depends on vulnerable versions of ethers
+                  node_modules/eth-gas-reporter
+            @ethersproject/providers  <=5.7.2
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of ws
+            node_modules/@ethersproject/providers
+            @ethersproject/wallet  <=5.7.0
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/hdnode
+            Depends on vulnerable versions of @ethersproject/json-wallets
+            Depends on vulnerable versions of @ethersproject/signing-key
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of @ethersproject/wordlists
+            node_modules/@ethersproject/wallet
+            @ethersproject/wordlists  5.0.8 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/wordlists
+
+ws  7.0.0 - 7.5.9
+Severity: high
+ws affected by a DoS when handling a request with many HTTP headers - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+fix available via `npm audit fix`
+node_modules/@ethersproject/providers/node_modules/ws
+
+29 vulnerabilities (25 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+Exit Code: 1
+----
+Command: npx hardhat init
+Output:
+Error HH23: You are trying to initialize a project inside an existing Hardhat project. The path to the project's configuration file is:  /home/praneet/devdock/expense-tracker/hardhat.config.ts.
+
+For more info go to https://hardhat.org/HH23 or run Hardhat with --show-stack-traces
+Exit Code: 1
+----
+Command: npm audit fix
+Output:
+
+changed 2 packages, and audited 283 packages in 7s
+
+57 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+fix available via `npm audit fix --force`
+Will install hardhat@0.0.7, which is a breaking change
+node_modules/cookie
+  @sentry/node  4.0.0-beta.0 - 7.74.2-alpha.1
+  Depends on vulnerable versions of cookie
+  node_modules/@sentry/node
+    hardhat  >=0.1.0-rc.0
+    Depends on vulnerable versions of @ethersproject/abi
+    Depends on vulnerable versions of @sentry/node
+    node_modules/hardhat
+
+elliptic  <=6.5.7
+Elliptic's EDDSA missing signature length check - https://github.com/advisories/GHSA-f7q4-pwc6-w24p
+Elliptic's ECDSA missing check for whether leading bit of r and s is zero - https://github.com/advisories/GHSA-977x-g7h5-7qgw
+Elliptic allows BER-encoded signatures - https://github.com/advisories/GHSA-49q7-c7j4-3p7m
+Elliptic's verify function omits uniqueness validation - https://github.com/advisories/GHSA-434g-2637-qmqr
+Valid ECDSA signatures erroneously rejected in Elliptic - https://github.com/advisories/GHSA-fc9h-whq2-v747
+fix available via `npm audit fix --force`
+Will install hardhat@0.0.7, which is a breaking change
+node_modules/elliptic
+  @ethersproject/signing-key  <=5.7.0
+  Depends on vulnerable versions of elliptic
+  node_modules/@ethersproject/signing-key
+    @ethersproject/transactions  <=5.7.0
+    Depends on vulnerable versions of @ethersproject/signing-key
+    node_modules/@ethersproject/transactions
+      @ethersproject/abstract-provider  *
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/abstract-provider
+        @ethersproject/abstract-signer  *
+        Depends on vulnerable versions of @ethersproject/abstract-provider
+        node_modules/@ethersproject/abstract-signer
+          @ethersproject/hash  5.0.6 - 5.7.0
+          Depends on vulnerable versions of @ethersproject/abstract-signer
+          node_modules/@ethersproject/hash
+            @ethersproject/abi  5.0.10 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/abi
+
+10 low severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+Exit Code: 1
+----
+Command: npm install dotenv
+Output:
+
+up to date, audited 579 packages in 2s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+29 vulnerabilities (25 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+Exit Code: 0
+----
+Command: npm audit fix
+Output:
+
+up to date, audited 579 packages in 13s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+No fix available
+node_modules/cookie
+  @sentry/node  4.0.0-beta.0 - 7.74.2-alpha.1
+  Depends on vulnerable versions of cookie
+  node_modules/@sentry/node
+    hardhat  >=0.1.0-rc.0
+    Depends on vulnerable versions of @ethersproject/abi
+    Depends on vulnerable versions of @sentry/node
+    node_modules/hardhat
+      @nomicfoundation/hardhat-chai-matchers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-chai-matchers
+      @nomicfoundation/hardhat-ethers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ethers
+        @nomicfoundation/hardhat-toolbox  *
+        Depends on vulnerable versions of @nomicfoundation/hardhat-chai-matchers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ignition-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-network-helpers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+        Depends on vulnerable versions of @typechain/hardhat
+        Depends on vulnerable versions of hardhat
+        Depends on vulnerable versions of hardhat-gas-reporter
+        Depends on vulnerable versions of solidity-coverage
+        node_modules/@nomicfoundation/hardhat-toolbox
+      @nomicfoundation/hardhat-ignition  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition
+      @nomicfoundation/hardhat-ignition-ethers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ignition
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition-ethers
+      @nomicfoundation/hardhat-network-helpers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-network-helpers
+      @nomicfoundation/hardhat-verify  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-verify
+      @typechain/hardhat  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@typechain/hardhat
+      hardhat-gas-reporter  *
+      Depends on vulnerable versions of hardhat
+      node_modules/hardhat-gas-reporter
+      solidity-coverage  >=0.8.0-beta.0
+      Depends on vulnerable versions of hardhat
+      node_modules/solidity-coverage
+
+elliptic  <=6.5.7
+Elliptic's EDDSA missing signature length check - https://github.com/advisories/GHSA-f7q4-pwc6-w24p
+Elliptic's ECDSA missing check for whether leading bit of r and s is zero - https://github.com/advisories/GHSA-977x-g7h5-7qgw
+Elliptic allows BER-encoded signatures - https://github.com/advisories/GHSA-49q7-c7j4-3p7m
+Elliptic's verify function omits uniqueness validation - https://github.com/advisories/GHSA-434g-2637-qmqr
+Valid ECDSA signatures erroneously rejected in Elliptic - https://github.com/advisories/GHSA-fc9h-whq2-v747
+No fix available
+node_modules/elliptic
+  @ethersproject/signing-key  <=5.7.0
+  Depends on vulnerable versions of elliptic
+  node_modules/@ethersproject/signing-key
+    @ethersproject/hdnode  *
+    Depends on vulnerable versions of @ethersproject/abstract-signer
+    Depends on vulnerable versions of @ethersproject/signing-key
+    Depends on vulnerable versions of @ethersproject/transactions
+    Depends on vulnerable versions of @ethersproject/wordlists
+    node_modules/@ethersproject/hdnode
+      @ethersproject/json-wallets  *
+      Depends on vulnerable versions of @ethersproject/abstract-signer
+      Depends on vulnerable versions of @ethersproject/hdnode
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/json-wallets
+    @ethersproject/transactions  <=5.7.0
+    Depends on vulnerable versions of @ethersproject/signing-key
+    node_modules/@ethersproject/transactions
+      @ethersproject/abstract-provider  *
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/abstract-provider
+        @ethersproject/abstract-signer  *
+        Depends on vulnerable versions of @ethersproject/abstract-provider
+        node_modules/@ethersproject/abstract-signer
+          @ethersproject/hash  5.0.6 - 5.7.0
+          Depends on vulnerable versions of @ethersproject/abstract-signer
+          node_modules/@ethersproject/hash
+            @ethersproject/abi  5.0.10 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/abi
+              @ethersproject/contracts  *
+              Depends on vulnerable versions of @ethersproject/abi
+              Depends on vulnerable versions of @ethersproject/abstract-provider
+              Depends on vulnerable versions of @ethersproject/abstract-signer
+              Depends on vulnerable versions of @ethersproject/transactions
+              node_modules/@ethersproject/contracts
+                ethers  5.0.0-beta.119 - 5.7.2
+                Depends on vulnerable versions of @ethersproject/abi
+                Depends on vulnerable versions of @ethersproject/abstract-provider
+                Depends on vulnerable versions of @ethersproject/abstract-signer
+                Depends on vulnerable versions of @ethersproject/contracts
+                Depends on vulnerable versions of @ethersproject/hash
+                Depends on vulnerable versions of @ethersproject/hdnode
+                Depends on vulnerable versions of @ethersproject/json-wallets
+                Depends on vulnerable versions of @ethersproject/providers
+                Depends on vulnerable versions of @ethersproject/signing-key
+                Depends on vulnerable versions of @ethersproject/transactions
+                Depends on vulnerable versions of @ethersproject/wallet
+                Depends on vulnerable versions of @ethersproject/wordlists
+                node_modules/eth-gas-reporter/node_modules/ethers
+                  eth-gas-reporter  >=0.2.26
+                  Depends on vulnerable versions of ethers
+                  node_modules/eth-gas-reporter
+            @ethersproject/providers  <=5.7.2
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of ws
+            node_modules/@ethersproject/providers
+            @ethersproject/wallet  <=5.7.0
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/hdnode
+            Depends on vulnerable versions of @ethersproject/json-wallets
+            Depends on vulnerable versions of @ethersproject/signing-key
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of @ethersproject/wordlists
+            node_modules/@ethersproject/wallet
+            @ethersproject/wordlists  5.0.8 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/wordlists
+
+ws  7.0.0 - 7.5.9
+Severity: high
+ws affected by a DoS when handling a request with many HTTP headers - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+fix available via `npm audit fix`
+node_modules/@ethersproject/providers/node_modules/ws
+
+29 vulnerabilities (25 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+Exit Code: 1
+----
+Command: npx hardhat compile
+Output:
+Nothing to compile
+No need to generate any newer typings.
+Exit Code: 0
+----
+Command: npx hardhat run scripts/deploy.ts --network sepolia
+Output:
+Error HH601: Script scripts/deploy.ts doesn't exist.
+
+For more info go to https://hardhat.org/HH601 or run Hardhat with --show-stack-traces
+Exit Code: 1
+----
+Command: npm install --save-dev @nomiclabs/hardhat-etherscan dotenv
+Output:
+
+up to date, audited 590 packages in 3s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+30 vulnerabilities (26 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+Exit Code: 0
+----
+Command: npm audit fix
+Output:
+
+up to date, audited 590 packages in 14s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+No fix available
+node_modules/cookie
+  @sentry/node  4.0.0-beta.0 - 7.74.2-alpha.1
+  Depends on vulnerable versions of cookie
+  node_modules/@sentry/node
+    hardhat  >=0.1.0-rc.0
+    Depends on vulnerable versions of @ethersproject/abi
+    Depends on vulnerable versions of @sentry/node
+    node_modules/hardhat
+      @nomicfoundation/hardhat-chai-matchers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-chai-matchers
+      @nomicfoundation/hardhat-ethers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ethers
+        @nomicfoundation/hardhat-toolbox  *
+        Depends on vulnerable versions of @nomicfoundation/hardhat-chai-matchers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ignition-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-network-helpers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+        Depends on vulnerable versions of @typechain/hardhat
+        Depends on vulnerable versions of hardhat
+        Depends on vulnerable versions of hardhat-gas-reporter
+        Depends on vulnerable versions of solidity-coverage
+        node_modules/@nomicfoundation/hardhat-toolbox
+      @nomicfoundation/hardhat-ignition  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition
+      @nomicfoundation/hardhat-ignition-ethers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ignition
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition-ethers
+      @nomicfoundation/hardhat-network-helpers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-network-helpers
+      @nomicfoundation/hardhat-verify  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-verify
+      @nomiclabs/hardhat-etherscan  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomiclabs/hardhat-etherscan
+      @typechain/hardhat  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@typechain/hardhat
+      hardhat-gas-reporter  *
+      Depends on vulnerable versions of hardhat
+      node_modules/hardhat-gas-reporter
+      solidity-coverage  >=0.8.0-beta.0
+      Depends on vulnerable versions of hardhat
+      node_modules/solidity-coverage
+
+elliptic  <=6.5.7
+Elliptic's EDDSA missing signature length check - https://github.com/advisories/GHSA-f7q4-pwc6-w24p
+Elliptic's ECDSA missing check for whether leading bit of r and s is zero - https://github.com/advisories/GHSA-977x-g7h5-7qgw
+Elliptic allows BER-encoded signatures - https://github.com/advisories/GHSA-49q7-c7j4-3p7m
+Elliptic's verify function omits uniqueness validation - https://github.com/advisories/GHSA-434g-2637-qmqr
+Valid ECDSA signatures erroneously rejected in Elliptic - https://github.com/advisories/GHSA-fc9h-whq2-v747
+No fix available
+node_modules/elliptic
+  @ethersproject/signing-key  <=5.7.0
+  Depends on vulnerable versions of elliptic
+  node_modules/@ethersproject/signing-key
+    @ethersproject/hdnode  *
+    Depends on vulnerable versions of @ethersproject/abstract-signer
+    Depends on vulnerable versions of @ethersproject/signing-key
+    Depends on vulnerable versions of @ethersproject/transactions
+    Depends on vulnerable versions of @ethersproject/wordlists
+    node_modules/@ethersproject/hdnode
+      @ethersproject/json-wallets  *
+      Depends on vulnerable versions of @ethersproject/abstract-signer
+      Depends on vulnerable versions of @ethersproject/hdnode
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/json-wallets
+    @ethersproject/transactions  <=5.7.0
+    Depends on vulnerable versions of @ethersproject/signing-key
+    node_modules/@ethersproject/transactions
+      @ethersproject/abstract-provider  *
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/abstract-provider
+        @ethersproject/abstract-signer  *
+        Depends on vulnerable versions of @ethersproject/abstract-provider
+        node_modules/@ethersproject/abstract-signer
+          @ethersproject/hash  5.0.6 - 5.7.0
+          Depends on vulnerable versions of @ethersproject/abstract-signer
+          node_modules/@ethersproject/hash
+            @ethersproject/abi  5.0.10 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/abi
+              @ethersproject/contracts  *
+              Depends on vulnerable versions of @ethersproject/abi
+              Depends on vulnerable versions of @ethersproject/abstract-provider
+              Depends on vulnerable versions of @ethersproject/abstract-signer
+              Depends on vulnerable versions of @ethersproject/transactions
+              node_modules/@ethersproject/contracts
+                ethers  5.0.0-beta.119 - 5.7.2
+                Depends on vulnerable versions of @ethersproject/abi
+                Depends on vulnerable versions of @ethersproject/abstract-provider
+                Depends on vulnerable versions of @ethersproject/abstract-signer
+                Depends on vulnerable versions of @ethersproject/contracts
+                Depends on vulnerable versions of @ethersproject/hash
+                Depends on vulnerable versions of @ethersproject/hdnode
+                Depends on vulnerable versions of @ethersproject/json-wallets
+                Depends on vulnerable versions of @ethersproject/providers
+                Depends on vulnerable versions of @ethersproject/signing-key
+                Depends on vulnerable versions of @ethersproject/transactions
+                Depends on vulnerable versions of @ethersproject/wallet
+                Depends on vulnerable versions of @ethersproject/wordlists
+                node_modules/eth-gas-reporter/node_modules/ethers
+                  eth-gas-reporter  >=0.2.26
+                  Depends on vulnerable versions of ethers
+                  node_modules/eth-gas-reporter
+            @ethersproject/providers  <=5.7.2
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of ws
+            node_modules/@ethersproject/providers
+            @ethersproject/wallet  <=5.7.0
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/hdnode
+            Depends on vulnerable versions of @ethersproject/json-wallets
+            Depends on vulnerable versions of @ethersproject/signing-key
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of @ethersproject/wordlists
+            node_modules/@ethersproject/wallet
+            @ethersproject/wordlists  5.0.8 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/wordlists
+
+ws  7.0.0 - 7.5.9
+Severity: high
+ws affected by a DoS when handling a request with many HTTP headers - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+fix available via `npm audit fix`
+node_modules/@ethersproject/providers/node_modules/ws
+
+30 vulnerabilities (26 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+Exit Code: 1
+----
+Command: npm install --save-dev @nomicfoundation/hardhat-ethers @types/node @types/mocha
+Output:
+
+up to date, audited 590 packages in 3s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+30 vulnerabilities (26 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+Exit Code: 0
+----
+Command: npm audit fix
+Output:
+
+up to date, audited 590 packages in 22s
+
+97 packages are looking for funding
+  run `npm fund` for details
+
+# npm audit report
+
+cookie  <0.7.0
+cookie accepts cookie name, path, and domain with out of bounds characters - https://github.com/advisories/GHSA-pxg6-pf52-xh8x
+No fix available
+node_modules/cookie
+  @sentry/node  4.0.0-beta.0 - 7.74.2-alpha.1
+  Depends on vulnerable versions of cookie
+  node_modules/@sentry/node
+    hardhat  >=0.1.0-rc.0
+    Depends on vulnerable versions of @ethersproject/abi
+    Depends on vulnerable versions of @sentry/node
+    node_modules/hardhat
+      @nomicfoundation/hardhat-chai-matchers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-chai-matchers
+      @nomicfoundation/hardhat-ethers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ethers
+        @nomicfoundation/hardhat-toolbox  *
+        Depends on vulnerable versions of @nomicfoundation/hardhat-chai-matchers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-ignition-ethers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-network-helpers
+        Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+        Depends on vulnerable versions of @typechain/hardhat
+        Depends on vulnerable versions of hardhat
+        Depends on vulnerable versions of hardhat-gas-reporter
+        Depends on vulnerable versions of solidity-coverage
+        node_modules/@nomicfoundation/hardhat-toolbox
+      @nomicfoundation/hardhat-ignition  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-verify
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition
+      @nomicfoundation/hardhat-ignition-ethers  *
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ethers
+      Depends on vulnerable versions of @nomicfoundation/hardhat-ignition
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-ignition-ethers
+      @nomicfoundation/hardhat-network-helpers  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-network-helpers
+      @nomicfoundation/hardhat-verify  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomicfoundation/hardhat-verify
+      @nomiclabs/hardhat-etherscan  *
+      Depends on vulnerable versions of @ethersproject/abi
+      Depends on vulnerable versions of hardhat
+      node_modules/@nomiclabs/hardhat-etherscan
+      @typechain/hardhat  *
+      Depends on vulnerable versions of hardhat
+      node_modules/@typechain/hardhat
+      hardhat-gas-reporter  *
+      Depends on vulnerable versions of hardhat
+      node_modules/hardhat-gas-reporter
+      solidity-coverage  >=0.8.0-beta.0
+      Depends on vulnerable versions of hardhat
+      node_modules/solidity-coverage
+
+elliptic  <=6.5.7
+Elliptic's EDDSA missing signature length check - https://github.com/advisories/GHSA-f7q4-pwc6-w24p
+Elliptic's ECDSA missing check for whether leading bit of r and s is zero - https://github.com/advisories/GHSA-977x-g7h5-7qgw
+Elliptic allows BER-encoded signatures - https://github.com/advisories/GHSA-49q7-c7j4-3p7m
+Elliptic's verify function omits uniqueness validation - https://github.com/advisories/GHSA-434g-2637-qmqr
+Valid ECDSA signatures erroneously rejected in Elliptic - https://github.com/advisories/GHSA-fc9h-whq2-v747
+No fix available
+node_modules/elliptic
+  @ethersproject/signing-key  <=5.7.0
+  Depends on vulnerable versions of elliptic
+  node_modules/@ethersproject/signing-key
+    @ethersproject/hdnode  *
+    Depends on vulnerable versions of @ethersproject/abstract-signer
+    Depends on vulnerable versions of @ethersproject/signing-key
+    Depends on vulnerable versions of @ethersproject/transactions
+    Depends on vulnerable versions of @ethersproject/wordlists
+    node_modules/@ethersproject/hdnode
+      @ethersproject/json-wallets  *
+      Depends on vulnerable versions of @ethersproject/abstract-signer
+      Depends on vulnerable versions of @ethersproject/hdnode
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/json-wallets
+    @ethersproject/transactions  <=5.7.0
+    Depends on vulnerable versions of @ethersproject/signing-key
+    node_modules/@ethersproject/transactions
+      @ethersproject/abstract-provider  *
+      Depends on vulnerable versions of @ethersproject/transactions
+      node_modules/@ethersproject/abstract-provider
+        @ethersproject/abstract-signer  *
+        Depends on vulnerable versions of @ethersproject/abstract-provider
+        node_modules/@ethersproject/abstract-signer
+          @ethersproject/hash  5.0.6 - 5.7.0
+          Depends on vulnerable versions of @ethersproject/abstract-signer
+          node_modules/@ethersproject/hash
+            @ethersproject/abi  5.0.10 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/abi
+              @ethersproject/contracts  *
+              Depends on vulnerable versions of @ethersproject/abi
+              Depends on vulnerable versions of @ethersproject/abstract-provider
+              Depends on vulnerable versions of @ethersproject/abstract-signer
+              Depends on vulnerable versions of @ethersproject/transactions
+              node_modules/@ethersproject/contracts
+                ethers  5.0.0-beta.119 - 5.7.2
+                Depends on vulnerable versions of @ethersproject/abi
+                Depends on vulnerable versions of @ethersproject/abstract-provider
+                Depends on vulnerable versions of @ethersproject/abstract-signer
+                Depends on vulnerable versions of @ethersproject/contracts
+                Depends on vulnerable versions of @ethersproject/hash
+                Depends on vulnerable versions of @ethersproject/hdnode
+                Depends on vulnerable versions of @ethersproject/json-wallets
+                Depends on vulnerable versions of @ethersproject/providers
+                Depends on vulnerable versions of @ethersproject/signing-key
+                Depends on vulnerable versions of @ethersproject/transactions
+                Depends on vulnerable versions of @ethersproject/wallet
+                Depends on vulnerable versions of @ethersproject/wordlists
+                node_modules/eth-gas-reporter/node_modules/ethers
+                  eth-gas-reporter  >=0.2.26
+                  Depends on vulnerable versions of ethers
+                  node_modules/eth-gas-reporter
+            @ethersproject/providers  <=5.7.2
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of ws
+            node_modules/@ethersproject/providers
+            @ethersproject/wallet  <=5.7.0
+            Depends on vulnerable versions of @ethersproject/abstract-provider
+            Depends on vulnerable versions of @ethersproject/abstract-signer
+            Depends on vulnerable versions of @ethersproject/hash
+            Depends on vulnerable versions of @ethersproject/hdnode
+            Depends on vulnerable versions of @ethersproject/json-wallets
+            Depends on vulnerable versions of @ethersproject/signing-key
+            Depends on vulnerable versions of @ethersproject/transactions
+            Depends on vulnerable versions of @ethersproject/wordlists
+            node_modules/@ethersproject/wallet
+            @ethersproject/wordlists  5.0.8 - 5.7.0
+            Depends on vulnerable versions of @ethersproject/hash
+            node_modules/@ethersproject/wordlists
+
+ws  7.0.0 - 7.5.9
+Severity: high
+ws affected by a DoS when handling a request with many HTTP headers - https://github.com/advisories/GHSA-3h5v-q93c-6h6q
+fix available via `npm audit fix`
+node_modules/@ethersproject/providers/node_modules/ws
+
+30 vulnerabilities (26 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+Some issues need review, and may require choosing
+a different dependency.
+Exit Code: 1
+----
+Command: npx hardhat run scripts/deploy.ts --network sepolia
+Output:
+Deploying contract with account: 0x5fF41db425a2AC3bd0cA2E699540a8C76c859f24
+Account balance: 0.824677006210902842
+Waiting for deployment...
+ExpenseTracker deployed to: 0x9435714Ca0cA1Cb3f6642A6ecC341216986328C8
+Transaction hash: 0xb2f761be1c7ab315f252509080826df583e15e2ba24e0f3fa31a2d598a6138b8
+Exit Code: 0
+----
