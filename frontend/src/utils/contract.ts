@@ -175,9 +175,10 @@ export const CONTRACT_ABI = [
       }  
 ];
 
-export function getContractConfig() {
-    return {
-      address: CONTRACT_ADDRESS,
-      abi: CONTRACT_ABI,
-    } as const;
+export function getContract(signer: ethers.Signer) {
+    return new ethers.Contract(
+      CONTRACT_ADDRESS,
+      CONTRACT_ABI,
+      signer
+    );
 }

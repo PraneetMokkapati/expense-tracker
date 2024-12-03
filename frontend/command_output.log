@@ -286,3 +286,73 @@ To address all issues (including breaking changes), run:
   npm audit fix --force
 Exit Code: 1
 ----
+Command: git remote add origin git@github.com:PraneetMokkapati/expense-tracker.git
+Output:
+error: remote origin already exists.
+Exit Code: 3
+----
+Command: git branch -M main
+Output:
+
+Exit Code: 0
+----
+Command: git log
+Output:
+commit 41f79c8e11e019b7f75d41cfd1fae101d10c6d19
+Author: Devdock <copilot@devdock.ai>
+Date:   Tue Dec 3 20:35:28 2024 +0530
+
+    checkpoint
+
+commit 548cb3b0a52b02fd2b2bc2b1bcd0edbdb0f55c4f
+Author: Devdock <copilot@devdock.ai>
+Date:   Tue Dec 3 18:04:04 2024 +0530
+
+    Autocommitted by Devdock 🤘
+Exit Code: 0
+----
+Command: git remote list
+Output:
+error: unknown subcommand: `list'
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --[no-]verbose    be verbose; must be placed before a subcommand
+Exit Code: 129
+----
+Command: git push -u origin main
+Output:
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+Exit Code: 0
+----
+Command: npm install wagmi viem ethers@5.7.2
+Output:
+
+up to date, audited 459 packages in 3s
+
+109 packages are looking for funding
+  run `npm fund` for details
+
+16 vulnerabilities (12 low, 4 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+Exit Code: 0
+----

@@ -1,13 +1,15 @@
+// components/TagManager.tsx
 'use client';
 import { useState, useEffect } from 'react';
-import { useAccount, useSigner } from 'wagmi';
+import { useEthersSigner } from '../utils/getSigner';
 import { getContract } from '../utils/contract';
+import { useAccount } from 'wagmi';
 
 export default function TagManager() {
   const [tags, setTags] = useState<string[]>([]);
   const [newTag, setNewTag] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const();
+  const [isLoading, setIsLoading] = useState(true);
+  const signer = useEthersSigner();
   const { isConnected } = useAccount();
 
   useEffect(() => {
@@ -24,6 +26,8 @@ export default function TagManager() {
       setTags(tags);
     } catch (error) {
       console.error('Error loading tags:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -67,6 +71,10 @@ export default function TagManager() {
     return <div className="text-center py-4">Please connect your wallet to manage tags</div>;
   }
 
+  if (isLoading) {
+    return <div className="text-center py-4">Loading tags...</div>;
+  }
+
   return (
     <div className="bg-white p-6 rounded-lg shadow">
       <h2 className="text-xl font-bold mb-4">Manage Tags</h2>
@@ -78,12 +86,12 @@ export default function TagManager() {
             value={newTag}
             onChange={(e) => setNewTag(e.target.value)}
             placeholder="Enter new tag"
-            className="flex-1 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
             disabled={isLoading}
           />
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+            className="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
             disabled={isLoading || !newTag.trim()}
           >
             Add Tag
@@ -91,29 +99,22 @@ export default function TagManager() {
         </div>
       </form>
 
-      <div className="space-y-2">
-        <h3 className="font-semibold mb-2">Current Tags:</h3>
-        {tags.length === 0 ? (
-          <p className="text-gray-500">No tags created yet</p>
-        ) : (
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <div
-                key={tag}
-                className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded"
-              >
-                <span>{tag}</span>
-                <button
-                  onClick={() => handleRemoveTag(tag)}
-                  className="text-red-500 hover:text-red-700"
-                  disabled={isLoading}
-                >
-                  ×
-                </button>
-              </div>
-            ))}
+      <div className="flex flex-wrap gap-2">
+        {tags.map((tag) => (
+          <div
+            key={tag}
+            className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full"
+          >
+            <span className="text-sm">{tag}</span>
+            <button
+              onClick={() => handleRemoveTag(tag)}
+              className="text-red-500 hover:text-red-700"
+              disabled={isLoading}
+            >
+              ×
+            </button>
           </div>
-        )}
+        ))}
       </div>
     </div>
   );
