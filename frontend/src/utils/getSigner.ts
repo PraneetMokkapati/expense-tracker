@@ -1,31 +1,22 @@
-// src/utils/getSigner.ts
-import { providers } from 'ethers';
-import { type WalletClient, type PublicClient, type HttpTransport } from 'viem';
-import { useWalletClient, usePublicClient } from 'wagmi';
+import { providers } from 'ethers'
+import { useMemo } from 'react'
+import type { Account, Chain, Client, Transport } from 'viem'
+import { Config, useConnectorClient } from 'wagmi'
 
-export function publicClientToProvider(publicClient: PublicClient) {
-  const { chain, transport } = publicClient;
+export function clientToSigner(client: Client<Transport, Chain, Account>) {
+  const { account, chain, transport } = client
   const network = {
     chainId: chain.id,
     name: chain.name,
     ensAddress: chain.contracts?.ensRegistry?.address,
-  };
-  if (transport.type !== 'http') throw new Error('Transport must be http');
-  return new providers.JsonRpcProvider(transport.url, network);
+  }
+  const provider = new providers.Web3Provider(transport, network)
+  const signer = provider.getSigner(account.address)
+  return signer
 }
 
-export function walletClientToSigner(walletClient: WalletClient) {
-  const provider = new providers.Web3Provider(walletClient.transport as any);
-  return provider.getSigner();
-}
-
-export function useEthersSigner({ chainId }: { chainId?: number } = {})
-{
- const walletClient  = useWalletClient({ chainId });
-  return walletClient ? walletClientToSigner(walletClient) : undefined;
-}
-
-export function useEthersProvider({ chainId }: { chainId?: number } = {}) {
-  const publicClient = usePublicClient({ chainId });
-  return publicClient ? publicClientToProvider(publicClient) : undefined;
+/** Action to convert a Viem Client to an ethers.js Signer. */
+export function useEthersSigner({ chainId }: { chainId?: number } = {}) {
+  const { data: client } = useConnectorClient<Config>({ chainId })
+  return useMemo(() => (client ? clientToSigner(client) : undefined), [client])
 }
